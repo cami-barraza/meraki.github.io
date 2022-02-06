@@ -3,6 +3,7 @@
 $readex-pro: 'Readex Pro', sans-serif;
 $primary_color: #E38A8A;
 
+
 body {
 	font-family: $readex-pro;
 }
@@ -91,7 +92,7 @@ ul {
 }
 #contact {
 	a {
-		color: #E38A8A;
+		// color: #E38A8A;
 		margin: 10px;
 	}
 	color: #fff;
@@ -154,3 +155,11 @@ ul {
 		}
 	}
 }
+
+
+$redes: ( 
+ twitter: #55acee,
+ instagram: #833AB4,
+ facebook: #3a5795,
+ send-mail: #C25E30
+);
