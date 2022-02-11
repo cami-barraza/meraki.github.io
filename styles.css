@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
+.btn--twitter {
+  color: #55acee;
+}
+
+.btn--instagram {
+  color: #833AB4;
+}
+
+.btn--facebook {
+  color: #3a5795;
+}
+
+.btn--send-mail {
+  color: #C25E30;
+}
+
 body {
   font-family: "Readex Pro", sans-serif;
 }
@@ -21,7 +37,7 @@ body {
   color: #ECD6D9;
 }
 
-.navbar {
+.navbar, #contact {
   background-color: #E38A8A;
 }
 
@@ -129,7 +145,6 @@ ul li {
       -ms-flex-align: center;
           align-items: center;
   height: 200px;
-  background-color: #E38A8A;
 }
 
 #contact a {

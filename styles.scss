@@ -2,11 +2,35 @@
 
 $readex-pro: 'Readex Pro', sans-serif;
 $primary_color: #E38A8A;
+$second_color: #ECD6D9;
+// MAP ---------------------------
+$redes: (
+ twitter: #55acee,
+ instagram: #833AB4,
+ facebook: #3a5795,
+ send-mail: #C25E30
+);
 
+@each $red, $color in $redes {
+	.btn--#{$red} {
+		color: $color;
+	}
+   }
 
-body {
+// MAP-GET
+$background:(
+	background-color: $primary_color,
+);
+
+// MIXIN
+@mixin font {
 	font-family: $readex-pro;
 }
+
+body {
+	@include font;
+}
+
 .section {
 	margin: auto;
 	padding: 50px;
@@ -19,11 +43,11 @@ body {
 	font-weight: bold;
 	padding: 20px;
 	&:hover {
-		color: #ECD6D9;
+		color: $second_color;
 	}
 }
 .navbar {
-	background-color: #E38A8A;
+	background-color: map-get($background,background-color);
 }
 .nav-link {
 	display: inline-block;
@@ -44,7 +68,7 @@ body {
 		height: 2px;
 		bottom: 0;
 		left: 0;
-		background-color: #ECD6D9;
+		background-color: $second_color;
 		transform-origin: bottom right;
 		transition: transform 0.25s ease-out;
 	}
@@ -92,7 +116,7 @@ ul {
 }
 #contact {
 	a {
-		// color: #E38A8A;
+		//color: #E38A8A;
 		margin: 10px;
 	}
 	color: #fff;
@@ -101,7 +125,8 @@ ul {
 	justify-content: center;
 	align-items: center;
 	height: 200px;
-	background-color: #E38A8A;
+	//background-color: map-get($background,background-color);
+	@extend .navbar; // EXTEND
 	p {
 		font-size: 14px;
 	}
@@ -155,11 +180,3 @@ ul {
 		}
 	}
 }
-
-
-$redes: ( 
- twitter: #55acee,
- instagram: #833AB4,
- facebook: #3a5795,
- send-mail: #C25E30
-);
